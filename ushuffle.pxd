@@ -5,3 +5,4 @@ cdef extern from "src/ushuffle.h":
 
     ctypedef long (*randfunc_t)()
     void set_randfunc(randfunc_t randfunc)
+
