@@ -1,14 +1,10 @@
-#!/usr/bin/env python2.3
-
 from distutils.core import setup, Extension
+from Cython.Build import cythonize
 
-setup (name = "ushuffle",
-       version = "1.0",
-       ext_modules = [
-        Extension('ushuffle',
-                  sources=['ushufflemodule.c',
-                           'ushuffle.c'
-                           ]
-                  )
-        ]
-       ) 
+ext_type = Extension("ushuffle",
+                     sources=["ushuffle.pyx",
+                              "ushuffle.c"])
+
+setup(name="ushuffle",
+      version="1.0",
+      ext_modules=cythonize([ext_type]))

@@ -36,7 +36,7 @@
 #include <string.h>
 #include <sys/resource.h>
 #include <sys/time.h>
-#include "ushuffle.h"
+#include "src/ushuffle.h"
 
 void print_help_and_exit() {
 	printf("uShuffle: a useful tool for shuffling biological sequences while preserving the k-let counts\n");
