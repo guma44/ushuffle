@@ -3,7 +3,7 @@ from Cython.Build import cythonize
 
 ext_type = Extension("ushuffle",
                      sources=["ushuffle.pyx",
-                              "ushuffle.c"])
+                              "src/ushuffle.c"])
 
 setup(name="ushuffle",
       version="1.0",
