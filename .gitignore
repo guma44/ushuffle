@@ -1,4 +1,4 @@
 .bash_history
 /build
-ushuffle.so
-ushuffle.c
+py_ushuffle.so
+py_ushuffle.c
