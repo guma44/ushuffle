@@ -4,8 +4,8 @@ from libc.stdlib cimport malloc, free
 def shuffle(char *sequence, int let_size):
     """Shuffle the sequence while preserving k-let size.
     """
-    cdef int length = len(s)
-    cdef char *t = <char *>malloc((len(s)) * sizeof(char))
+    cdef int length = len(sequence)
+    cdef char *t = <char *>malloc((len(sequence)) * sizeof(char))
     ushuffle_mod.shuffle(sequence, t, length, let_size)
     try:
         py_t = t[:length]

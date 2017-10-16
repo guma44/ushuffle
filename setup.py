@@ -27,7 +27,7 @@ setup(name="ushuffle",
     keywords='ushuffle',
     classifiers=[
         'Development Status :: 4 - Beta',
-        'Intended Audience :: Scientists',
+        'Intended Audience :: Science/Research',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
