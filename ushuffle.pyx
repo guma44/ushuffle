@@ -1,10 +1,10 @@
 cimport ushuffle_mod
 from libc.stdlib cimport malloc, free
 
-def shuffle(char *s, int let_size):
+def shuffle(char *sequence, int let_size):
     cdef int length = len(s)
     cdef char *t = <char *>malloc((len(s)) * sizeof(char))
-    ushuffle_mod.shuffle(s, t, length, let_size)
+    ushuffle_mod.shuffle(sequence, t, length, let_size)
     try:
         py_t = t[:length]
     finally:
