@@ -1,4 +1,5 @@
 .bash_history
 /build
-py_ushuffle.so
-py_ushuffle.c
+ushuffle.so
+ushuffle.c
+.DS_Store

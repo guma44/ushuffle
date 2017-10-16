@@ -1,4 +1,4 @@
-from py_ushuffle import Shuffler
+from ushuffle import Shuffler
 
 seq = "ababcdcdabdcabvababab"
 
