@@ -5,7 +5,7 @@ ext_type = Extension("ushuffle",
                      sources=["ushuffle.pyx",
                               "src/ushuffle.c"])
 
-with open('README.rst') as readme_file:
+with open('README.md') as readme_file:
     readme = readme_file.read()
 
 requirements = [
