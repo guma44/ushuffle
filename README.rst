@@ -32,20 +32,17 @@ make shuffling many times eg.:
 
 ```
 from ushuffle import shuffle, Shuffler
-
 seq = "ababcdcdabdcabvababab"
 shuffler = Shuffler(self.seq, len(self.seq), 2)
-
 for i in range(10):
     seqres = shuffler.shuffle()
     print("results:", seqres)
-
 print shuffle(a, 2)
 ```
 
 
-Reference
----------
+References
+----------
 
 If you use this tool please refer to the original paper and authors:
 Minghui Jiang, James Anderson, Joel Gillespie, and Martin Mayne. [uShuffle: a useful tool for shuffling biological sequences while preserving the k-let counts.](http://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-9-192) BMC Bioinformatics, 9:#192, 2008.
