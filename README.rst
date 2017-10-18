@@ -34,7 +34,7 @@ make shuffling many times eg.:
 
     from ushuffle import shuffle, Shuffler
     seq = "ababcdcdabdcabvababab"
-    shuffler = Shuffler(self.seq, len(self.seq), 2)
+    shuffler = Shuffler(self.seq, 2)
     for i in range(10):
         seqres = shuffler.shuffle()
         print("results:", seqres)
