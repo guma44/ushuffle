@@ -5,7 +5,7 @@ ext_type = Extension("ushuffle",
                      sources=["ushuffle.pyx",
                               "src/ushuffle.c"])
 
-with open('README.md') as readme_file:
+with open('README.rst') as readme_file:
     readme = readme_file.read()
 
 requirements = [
@@ -13,7 +13,7 @@ requirements = [
 ]
 
 setup(name="ushuffle",
-    version="1.0.1",
+    version="1.0.2",
     description="A Cython wrapper over uShuffle - a useful tool for shuffling biological sequences while preserving the k-let counts.",
     long_description=readme,
     author="Rafal Gumienny",
@@ -37,5 +37,6 @@ setup(name="ushuffle",
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
       ext_modules=cythonize([ext_type]))
