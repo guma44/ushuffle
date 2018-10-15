@@ -13,7 +13,7 @@ requirements = [
 ]
 
 setup(name="ushuffle",
-    version="1.0.3",
+    version="1.0.4",
     description="A Cython wrapper over uShuffle - a useful tool for shuffling biological sequences while preserving the k-let counts.",
     long_description=readme,
     author="Rafal Gumienny",
