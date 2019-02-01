@@ -6,7 +6,7 @@ try:
                                   "src/ushuffle.c"])
     extensions = cythonize([ext_type])
 except ImportError:
-    print "No Cython installed. Building from pre-compiled sources."
+    print("No Cython installed. Building from pre-compiled sources.")
     ext_type = Extension("ushuffle",
                          sources=["ushuffle_cython.c",
                                   "src/ushuffle.c"])
@@ -22,7 +22,7 @@ requirements = [
 ]
 
 setup(name="ushuffle",
-    version="1.0.5",
+    version="1.0.6",
     description="A Cython wrapper over uShuffle - a useful tool for shuffling biological sequences while preserving the k-let counts.",
     long_description=readme,
     author="Rafal Gumienny",

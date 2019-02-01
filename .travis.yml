@@ -1,20 +1,16 @@
 language: python
 python:
-  - 2.7
-
-# command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+- 2.7
 install: pip install -r requirements.txt
-
 script: make dist
-
 deploy:
   provider: pypi
   distributions: sdist
   user: guma44
-  password:
-    secure: JcgvTOSwJZ4nsz6ku3RdxKTBqGtevQrwwCCt+qb41AQtAFI0MP1ryQGt1cn5UtGPc4/SiYpKl3j5OlLF07pcXczG2B4qXdiHye/23pwSh18MmdsemiZUEHjFpljGIU7KnhCcB8SoTsccbqRY7o8STzaPR/OXnD61Uzp6nxyz0lJeV5FWV+A+AMTXIP4dpQYu3r8SI1kaaj8fqN1j5eX+N5DJNBzu+x2x4ibgSTUj2BBlZyWEh5Xy/yM7Fk/P0QQM+WbMyjKTw1Ga0jZEPqca1i85ZKxpOaH11J617Kuam9GaM+tmWUoPV2SowMmiPma2TiIwK2h3bbnDG5rLaCZh6Q+smtdWQ1iqRfoysQdISUCz1nPmLN4lROpE0y/um5qAWWWUNmoTr8WIOKxH3ROD9yLgbwh2lFDGLslLVkVVLZ0tiTFxVpKDTXHnZNyfVAZAy0ge/wl8A1MOsNys7pzhravrg7AR3ci/466KHM0W4Dut8PlFYHbbv1EdT8ppC+zfRbBuTz9It6H+XIxRSg4syeHFKacwU8i6RBqiJBQzJzZtrUkFY6nSBpInSiT9Ip/s1OMM+SlfyHLubdFX4zd+C88iOtP3120zvDAZ7Q98ZCWtdCgQNrn/x75jfyfcOSwYn+sMIL4NJE68ZO1HwXqQvtmsV7Onp6zJXqgxxNd4cH4=
   on:
     tags: true
     condition: "$TRAVIS_TAG =~ ^v.*$"
     repo: guma44/ushuffle
     python: 2.7
+  password:
+    secure: hA20hP3GsLFvxfo/v0yLrRfQjPZrvswkm/WA9kKie9tEsJM9CpQ8Wjw9UBaAYmiLKDtRwPTzBHLPMdWgpOygBh/1dKZkd9QyPimxjXxrzofjYFr46KBjF1LkxqoxtCnfc5atC9ccw6J5KwXiR4vs7Ezu7lZmJ/Itl4hY/96huLs7SGLYg0eIHOkkGA50YzJPZnuMAZtti0Va+2mnb91hkHK6XXPRzN5LjqPX/U1cTMN5PkAP0SoBYI4So6V1Lrs1zZWnYPneGjbT+3RRMrPnsW91JSr1Ym4A77vjNa5/aCC9oppQylqZl7Y9mrR08pvd07LMG+D3YnYno6vmUdGbhdBEqv5/vm1I+YGmEWs9YZToksTh5RqECZzaqMHdBjqgiIqbYWLpwVYwmgIqa1rIpQCUekMsb9SzvLtnE5kIXcWLBYvTKv95FzoF9HPbsan6pKF9fQLZS3yrwtVDx6GZjS3zV5nydBWwBrlp1kefZ69xaczlAe/qC/DKJfRBVBSIHs0knMwPLWSMIjs2Ddw6VyedOgh7qtncNeRqw2zrHm+R7WJ7SUEMd2AKvhpsMW1ipbDjrT166u7jE/T+jyEscVegM4V3Zy8/yd9Rf6Ha0tzdl4oHOhR+vCKC6dC+6Kv2A7hxGA4NtXNNq3hhT9XFe693TCvFte8otGUzW1G7Arc=
