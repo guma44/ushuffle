@@ -1,9 +1,18 @@
 from setuptools import setup, find_packages, Extension
-from Cython.Build import cythonize
+try:
+    from Cython.Build import cythonize
+    ext_type = Extension("ushuffle",
+                         sources=["ushuffle.pyx",
+                                  "src/ushuffle.c"])
+    extensions = cythonize([ext_type])
+except ImportError:
+    print "No Cython installed. Building from pre-compiled sources."
+    ext_type = Extension("ushuffle",
+                         sources=["ushuffle_cython.c",
+                                  "src/ushuffle.c"])
+    extensions = [ext_type]
 
-ext_type = Extension("ushuffle",
-                     sources=["ushuffle.pyx",
-                              "src/ushuffle.c"])
+
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -13,7 +22,7 @@ requirements = [
 ]
 
 setup(name="ushuffle",
-    version="1.0.4",
+    version="1.0.5",
     description="A Cython wrapper over uShuffle - a useful tool for shuffling biological sequences while preserving the k-let counts.",
     long_description=readme,
     author="Rafal Gumienny",
@@ -39,4 +48,4 @@ setup(name="ushuffle",
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-      ext_modules=cythonize([ext_type]))
+      ext_modules=extensions)
