@@ -1,25 +1,26 @@
+import os
 from setuptools import setup, find_packages, Extension
+
+FILEPATH = os.path.dirname(os.path.abspath(__file__))
+
 try:
     from Cython.Build import cythonize
     ext_type = Extension("ushuffle",
-                         sources=["ushuffle.pyx",
-                                  "src/ushuffle.c"])
+                         sources=[os.path.join(FILEPATH, "ushuffle.pyx"),
+                                  os.path.join(FILEPATH, "src/ushuffle.c")])
     extensions = cythonize([ext_type])
+    print("Cython installed. Building sources using Cython.")
 except ImportError:
     print("No Cython installed. Building from pre-compiled sources.")
     ext_type = Extension("ushuffle",
-                         sources=["ushuffle_cython.c",
-                                  "src/ushuffle.c"])
+                         sources=[os.path.join(FILEPATH, "ushuffle_cython.c"),
+                                  os.path.join(FILEPATH, "src/ushuffle.c")])
     extensions = [ext_type]
 
 
 
-with open('README.rst') as readme_file:
+with open(os.path.join(FILEPATH, 'README.rst')) as readme_file:
     readme = readme_file.read()
-
-requirements = [
-    'Cython>=0.27'
-]
 
 setup(name="ushuffle",
     version="1.0.6",
@@ -30,7 +31,7 @@ setup(name="ushuffle",
     url='https://github.com/guma44/ushuffle',
     packages=find_packages(include=['ushuffle']),
     include_package_data=True,
-    install_requires=requirements,
+    install_requires=list(),
     license="BSD license",
     zip_safe=False,
     keywords='ushuffle',
