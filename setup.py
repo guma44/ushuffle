@@ -23,7 +23,7 @@ with open(os.path.join(FILEPATH, 'README.rst')) as readme_file:
     readme = readme_file.read()
 
 setup(name="ushuffle",
-    version="1.0.6",
+    version="1.0.7",
     description="A Cython wrapper over uShuffle - a useful tool for shuffling biological sequences while preserving the k-let counts.",
     long_description=readme,
     author="Rafal Gumienny",
