@@ -14,7 +14,7 @@ class TestUshuffle(unittest.TestCase):
 
     def setUp(self):
         """Set up test fixtures, if any."""
-        self.seq = "ababcdcdabdcabvababab"
+        self.seq = b"ababcdcdabdcabvababab"
         self.shuffler = Shuffler(self.seq, 2)
 
     def test_sequence(self):
