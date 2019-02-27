@@ -40,6 +40,10 @@ make shuffling many times eg.:
         print("results:", seqres)
     print shuffle(seq, 2)
 
+The library exposes also the function to set the random seed called `set_seed`.
+This sets the seed globally once and subsequent call to this function will not
+change the seed anymore.
+
 References
 ----------
 
