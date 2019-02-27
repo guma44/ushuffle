@@ -1,5 +1,5 @@
 cimport ushuffle_mod
-from libc.stdlib cimport malloc, free
+from libc.stdlib cimport malloc, free, rand, srand
 from libc.string cimport strlen
 
 def shuffle(char *sequence, int let_size):
@@ -12,6 +12,10 @@ def shuffle(char *sequence, int let_size):
     finally:
         free(t)
     return py_t
+
+def set_seed(int seed):
+    srand(seed)
+    ushuffle_mod.set_randfunc(<ushuffle_mod.randfunc_t> rand)
 
 cdef class Shuffler:
     """A sequence shuffler with k-let size preservation."""
