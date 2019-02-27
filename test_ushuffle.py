@@ -33,7 +33,13 @@ class TestUshuffle(unittest.TestCase):
         """Just test the printing it is correct."""
         for i in range(10):
             seqres = self.shuffler.shuffle()
-            print("original:", self.shuffler.sequence, "results:", seqres, self.shuffler.sequence == seqres)
+            print("original:",
+                  self.shuffler.sequence,
+                  "results:",
+                  seqres,
+                  "is the same?",
+                  self.shuffler.sequence == seqres)
+
 
 if __name__ == '__main__':
     unittest.main()
