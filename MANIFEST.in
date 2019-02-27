@@ -4,6 +4,7 @@ include src/ushuffle.c
 include src/ushuffle.h
 include ushuffle_mod.pxd
 include ushuffle.pyx
+include ushuffle_cython.c
 exclude ushuffle.c
 exclude ushuffle.so
 

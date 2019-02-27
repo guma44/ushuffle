@@ -36,7 +36,7 @@ clean-build: ## remove build artifacts
 	rm -fr dist/
 	rm -fr .eggs/
 	find . -name '*.egg-info' -exec rm -fr {} +
-	find . -name '*.egg' -exec rm -f {} +
+	find . -name '*.egg' -exec rm -rf {} +
 	rm -fr ushuffle.c ushuffle.so
 
 clean-pyc: ## remove Python file artifacts
