@@ -40,7 +40,11 @@
 
 /* set random function */
 
-static randfunc_t randfunc = random;
+#if defined(_WIN32) || defined(_WIN64)
+	static randfunc_t randfunc = rand;
+#else
+	static randfunc_t randfunc = random;
+#endif
 
 void set_randfunc(randfunc_t func) {
 	randfunc = func;
