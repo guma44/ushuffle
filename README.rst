@@ -43,6 +43,7 @@ Python 2:
     print shuffle(seq, 2)
 
 Python 3:
+
 .. code-block :: python
 
     from ushuffle import shuffle, Shuffler
