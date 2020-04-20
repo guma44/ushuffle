@@ -28,7 +28,9 @@ Usage
 -----
 
 The library exposes a shuffling function shuffle and a Shuffler object used to
-make shuffling many times eg.:
+make shuffling many times.
+
+Python 2:
 
 .. code-block :: python
 
@@ -39,6 +41,17 @@ make shuffling many times eg.:
         seqres = shuffler.shuffle()
         print("results:", seqres)
     print shuffle(seq, 2)
+
+Python 3:
+.. code-block :: python
+
+    from ushuffle import shuffle, Shuffler
+    seq = b"ababcdcdabdcabvababab"
+    shuffler = Shuffler(seq, 2)
+    for i in range(10):
+        seqres = shuffler.shuffle()
+        print("results:", seqres)
+    print(shuffle(seq, 2))
 
 The library exposes also the function to set the random seed called `set_seed`.
 This sets the seed globally once and subsequent call to this function will not
